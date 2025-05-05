@@ -1,5 +1,7 @@
 package generator
 
+import "fmt"
+
 func isPrime(number int) bool {
 	if number <= 1 { // 1 and numbers below are not prime
 		return false
@@ -40,12 +42,32 @@ func NewNumbersArray(start int, end int) []interface{} {
 		if !isPrime(i) {
 			if replaceFooBar(i) == "FooBar" {
 				arr = append(arr, "FooBar")
+				if len(arr) == 1 {
+					fmt.Print("FooBar")
+				} else {
+					fmt.Print(" ", "FooBar")
+				}
 			} else if replaceFooBar(i) == "Bar" {
 				arr = append(arr, "Bar")
+				if len(arr) == 1 {
+					fmt.Print("Bar")
+				} else {
+					fmt.Print(" ", "Bar")
+				}
 			} else if replaceFooBar(i) == "Foo" {
 				arr = append(arr, "Foo")
+				if len(arr) == 1 {
+					fmt.Print("Foo")
+				} else {
+					fmt.Print(" ", "Foo")
+				}
 			} else {
 				arr = append(arr, i)
+				if len(arr) == 1 {
+					fmt.Print(i)
+				} else {
+					fmt.Print(" ", i)
+				}
 			}
 		}
 	}

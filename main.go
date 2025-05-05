@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/b1llywitant0/stamps-tech-test.git/generator"
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	const startNumber = 1
+	const endNumber = 100
+	generator.NewNumbersArray(startNumber, endNumber)
 }

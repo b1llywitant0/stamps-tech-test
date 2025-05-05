@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	const startNumber = 10
+	const startNumber = 1
 	const endNumber = 100
 	generator.NewNumbersArray(startNumber, endNumber)
 }
